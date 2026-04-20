@@ -4,8 +4,9 @@
   "description": "Keshav's Personal AI Mock Interviewer — DRDO | ISRO | NIC | NPCIL",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "npx vite build",
+    "preview": "vite preview",
+    "postinstall": "chmod +x node_modules/.bin/vite"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -15,5 +16,8 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",
     "vite": "^5.4.21"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
