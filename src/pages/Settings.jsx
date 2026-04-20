@@ -106,7 +106,7 @@ export default function Settings() {
       {/* Popup Message Editor */}
       <Section title="PERSONAL MESSAGE TO KESHAV" color="var(--nova2)">
         <p style={{ fontFamily:'var(--font-body)', fontSize:13, color:'var(--text3)', lineHeight:1.7, marginBottom:16, fontWeight:300 }}>
-           <code style={{ color:'var(--plasma)', background:'rgba(0,245,255,0.08)', padding:'1px 6px', borderRadius:4 }}>src/components/PopupMessage.jsx</code> directly.
+           <code style={{ color:'var(--plasma)', background:'rgba(0,245,255,0.08)', padding:'1px 6px', borderRadius:4 }}></code> 
         </p>
         <textarea
           value={popupMsg}
