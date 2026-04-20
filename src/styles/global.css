@@ -1,0 +1,117 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --void: #00000f;
+  --deep: #020510;
+  --cosmos: #050b1a;
+  --nebula: #0a1428;
+  --surface: #0d1e3a;
+  --surface2: #122444;
+  --rim: #1a3060;
+  --rim2: #1f3d80;
+  --plasma: #00f5ff;
+  --plasma2: #00b8d4;
+  --nova: #7c3aed;
+  --nova2: #a78bfa;
+  --solar: #fbbf24;
+  --solar2: #f59e0b;
+  --pulsar: #10b981;
+  --pulsar2: #34d399;
+  --supernova: #ef4444;
+  --mars: #ff6b35;
+  --text: #e2f0ff;
+  --text2: #7ba3cc;
+  --text3: #3d6090;
+  --drdo: #ff6b35;
+  --isro: #7c3aed;
+  --nic: #10b981;
+  --npcil: #fbbf24;
+  --font-hud: 'Orbitron', sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+  --font-body: 'Exo 2', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--void);
+  color: var(--text);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  overflow-x: hidden;
+  cursor: crosshair;
+}
+
+/* Space cursor */
+* { cursor: crosshair; }
+button, a { cursor: pointer !important; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--void); }
+::-webkit-scrollbar-thumb { background: var(--plasma2); border-radius: 2px; }
+
+button { border: none; outline: none; font-family: var(--font-body); }
+input, textarea { font-family: var(--font-mono); }
+a { text-decoration: none; color: inherit; }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; } to { opacity: 1; }
+}
+@keyframes twinkle {
+  0%,100% { opacity: 0.2; transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.4); }
+}
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(60px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(60px) rotate(-360deg); }
+}
+@keyframes plasma-pulse {
+  0%,100% { box-shadow: 0 0 10px rgba(0,245,255,0.3), 0 0 30px rgba(0,245,255,0.1); }
+  50%      { box-shadow: 0 0 20px rgba(0,245,255,0.6), 0 0 60px rgba(0,245,255,0.2); }
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+@keyframes spin  { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+@keyframes float {
+  0%,100% { transform: translateY(0px) rotate(0deg); }
+  33%     { transform: translateY(-12px) rotate(1deg); }
+  66%     { transform: translateY(-6px) rotate(-1deg); }
+}
+@keyframes scanline {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  10%  { opacity: 0.5; }
+  90%  { opacity: 0.5; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+@keyframes glitch {
+  0%,100% { clip-path: none; transform: none; }
+  20%     { clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%); transform: translate(-2px); }
+  40%     { clip-path: polygon(0 60%, 100% 60%, 100% 62%, 0 62%); transform: translate(2px); }
+  60%     { clip-path: polygon(0 40%, 100% 40%, 100% 41%, 0 41%); transform: translate(-1px); }
+}
+@keyframes nebula-drift {
+  0%,100% { transform: translate(0,0) scale(1); }
+  25%     { transform: translate(30px,-20px) scale(1.05); }
+  50%     { transform: translate(-20px,30px) scale(0.95); }
+  75%     { transform: translate(10px,10px) scale(1.02); }
+}
+@keyframes countdown-flash {
+  0%,100% { color: var(--supernova); text-shadow: 0 0 20px var(--supernova); }
+  50%     { color: #fff; text-shadow: 0 0 40px var(--supernova); }
+}
+@keyframes modal-enter {
+  from { opacity:0; transform: scale(0.85) translateY(30px); }
+  to   { opacity:1; transform: scale(1) translateY(0); }
+}
+@keyframes star-birth {
+  from { opacity:0; transform: scale(0); }
+  to   { opacity:1; transform: scale(1); }
+}
+@keyframes warp {
+  from { transform: scaleX(1); opacity: 1; }
+  to   { transform: scaleX(20); opacity: 0; }
+}

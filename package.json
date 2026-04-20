@@ -1,0 +1,19 @@
+{
+  "name": "keshav-ai-interviewer",
+  "version": "2.0.0",
+  "description": "Keshav's Personal AI Mock Interviewer — DRDO | ISRO | NIC | NPCIL",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.1.0"
+  }
+}
