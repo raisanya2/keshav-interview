@@ -106,7 +106,7 @@ export default function Settings() {
       {/* Popup Message Editor */}
       <Section title="PERSONAL MESSAGE TO KESHAV" color="var(--nova2)">
         <p style={{ fontFamily:'var(--font-body)', fontSize:13, color:'var(--text3)', lineHeight:1.7, marginBottom:16, fontWeight:300 }}>
-          Edit the popup message that appears when Keshav opens the website. To edit the sender name or other popup settings, edit <code style={{ color:'var(--plasma)', background:'rgba(0,245,255,0.08)', padding:'1px 6px', borderRadius:4 }}>src/components/PopupMessage.jsx</code> directly.
+           <code style={{ color:'var(--plasma)', background:'rgba(0,245,255,0.08)', padding:'1px 6px', borderRadius:4 }}>src/components/PopupMessage.jsx</code> directly.
         </p>
         <textarea
           value={popupMsg}
@@ -134,7 +134,7 @@ export default function Settings() {
           }}>RESET POPUP TRIGGER</button>
         </div>
         <p style={{ fontFamily:'var(--font-mono)', fontSize:10, color:'var(--text3)', marginTop:10 }}>
-          Note: To edit the full popup (emoji, title, sender name), open PopupMessage.jsx and update POPUP_CONFIG at the top.
+          
         </p>
       </Section>
 
